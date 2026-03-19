@@ -1,0 +1,109 @@
+#page title
+page_title                                : HearthVale (墟里) - 在杭州约拍，找靠谱搭子
+
+# App Info
+ios_app_id                                : 6758544322                                   # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
+ios_app_country                           : china                                        # Required outside USA. Enter 2 letter country code as in https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+
+appstore_link                             : https://apps.apple.com/cn/app/%E7%83%9B%E7%85%A7%E5%8F%B0/id6758544322    # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
+playstore_link                            :                                           # Enter Google Play Store URL.
+presskit_download_link                    :                                            # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
+                                                                                      # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
+official_website_link                     : https://www.logoscaller.com
+
+app_icon                                  : assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
+app_name                                  : HearthVale                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
+app_price                                 : 正在内测                                          # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
+app_description                           : HearthVale (墟里) - 杭州首个专注于“拍照互勉”的信任型社交平台——让想拍照的人和会拍照的人，安全、靠谱地约到一起。（正在内测状态）
+
+enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
+
+
+
+# Information About Yourself
+your_name                                 : HearthVale Team                               
+your_link                                 : https://www.logoscaller.com                                     
+your_city                                 : HangZhou                                
+email_address                             : contact@hearthvale.com
+linkedin_username                         :                                           
+linkedin_company                          :                                           
+facebook_username                         :                                           
+instagram_username                        :                                           
+twitter_username                          :                                           
+github_username                           :                                           
+youtube_username                          :
+mastodon_link                             : 
+
+# Feature List                            Edit, add or remove features to be presented.
+features                                  :
+
+  - title                                 : 信任基石
+    description                           : 引入实名认证与芝麻信用分，双向互评，解决互勉市场“想拍不敢拍、约了怕被骗”的信任危机。
+    fontawesome_icon_name                 : shield-alt
+    
+  - title                                 : 履约保障
+    description                           : 提供标准电子约拍协议与押金托管，完成约拍后自动释放，解决“放鸽子”与“不返图”难题。
+    fontawesome_icon_name                 : file-contract
+    
+  - title                                 : 智能匹配与本地圈子
+    description                           : 涵盖多种风格标签，优先进行同城推荐。打造作品墙，让你快速找到风格对路的创作搭子。
+    fontawesome_icon_name                 : user-friends
+
+  - title                                 : 杭州专属拍照地图
+    description                           : 标注太子湾、西湖等30+热门打卡点及周边约拍动态，更有樱花季、银杏季等特定主题活动等你参加。
+    fontawesome_icon_name                 : map-marked-alt
+
+
+# Theme Settings
+topbar_color                              : "#ffffff"
+topbar_transparency                       : 0.2
+topbar_title_color                        : "#000000"
+
+cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
+cover_overlay_color                       : "#fdfbf7"
+cover_overlay_transparency                : 0.9
+
+device_color                              : white                                     # Set to: blue, black, yellow, coral or white.
+
+body_background_color                     : "#fdfbf7"
+
+link_color                                : "#5E5CE6"
+
+app_title_color                           : "#000000"
+app_price_color                           : "#000000"
+app_description_color                     : "#333333"
+
+feature_title_color                       : "#000000"
+feature_text_color                        : "#555555"
+
+feature_icons_foreground_color            : "#5E5CE6"
+feature_icons_background_color            : "#ffffff"
+
+social_icons_foreground_color             : "#000000"
+social_icons_background_color             : "#ffffff"
+
+footer_text_color                         : "#666666"
+
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+  - vendor
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown
+plugins:
+  - jekyll-sass-converter

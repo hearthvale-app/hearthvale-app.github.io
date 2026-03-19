@@ -1,0 +1,299 @@
+<!-- Wrapping everything in .features div to respect the grid layout -->
+<div class="features" style="display: block; margin-top: 40px; padding-bottom: 60px;">
+
+    <style>
+        /* Global Styles for this component */
+        .mcp-tutorial-container {
+            max-width: 1100px;
+            /* Increased from 800px to better fill space */
+            width: 95%;
+            /* Responsive width */
+            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            padding-bottom: 20px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.1);
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            box-shadow: 0 4px 10px rgba(58, 123, 213, 0.3);
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .step-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            /* Increased gap for better spacing on wide screens */
+        }
+
+        .step-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .step-image-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .step-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .step-image-container:hover img {
+            transform: scale(1.02);
+        }
+
+        .code-block-wrapper {
+            position: relative;
+            background: #f4f6f8;
+            border-radius: 12px;
+            padding: 15px;
+            font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-top: 15px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: #f0f0f0;
+            border-color: #ccc;
+        }
+
+        @media (min-width: 768px) {
+            .step-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .step-text {
+                flex: 1;
+                padding-right: 20px;
+            }
+
+            .step-visual {
+                flex: 1.4;
+                /* Give visual slightly more space on wide layout */
+            }
+        }
+    </style>
+
+    <div class="mcp-tutorial-container">
+
+        <!-- REMOVED INTRO SECTION PER REQUEST -->
+
+        <!-- Step 1 -->
+        <div class="glass-card">
+            <div class="step-header">
+                <div class="step-number">1</div>
+                <h2 class="step-title">实名认证与芝麻信用</h2>
+            </div>
+            <div class="step-content">
+                <div class="step-text">
+                    <p class="step-description">
+                        构建坚实的信任基石：首次进入应用，请完成<strong>手机号+身份证双重认证</strong>，并授权接入芝麻信用分。分值达到650分以上的用户将获得专属“信用标识”，解决互勉市场的“想拍不敢拍”难题。
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-container">
+                        <img src="assets/mcp_steps/step_1.png" alt="Step 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card">
+            <div class="step-header">
+                <div class="step-number">2</div>
+                <h2 class="step-title">寻找与智能匹配</h2>
+            </div>
+            <div class="step-content">
+                <div class="step-text">
+                    <p class="step-description">
+                        通过丰富风格标签（日系、汉服、胶片等）快速筛选，优先为您推荐<strong>距离近、信用高</strong>的同城摄影师或素人模特，让沟通成本大幅降低。
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-container">
+                        <img src="assets/mcp_steps/step_2.png" alt="Step 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card">
+            <div class="step-header">
+                <div class="step-number">3</div>
+                <h2 class="step-title">电子协议与押金托管</h2>
+            </div>
+            <div class="step-content">
+                <div class="step-text">
+                    <p class="step-description">
+                        为了保障双方权益，平台内置标准<strong>约拍电子协议</strong>，明确返图数量与肖像权使用范围。您还可以选择发起押金托管，彻底杜绝“被放鸽子”或“不返图”的现象。
+                    </p>
+                    <div class="code-block-wrapper">
+                        <button class="copy-btn"
+                            onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText)">Copy</button>
+                        <pre>
+"hearthvale_agreement": {
+  "type": "standard",
+  "terms": [
+    "返图数量：≥9张",
+    "返图时间：拍摄后7个工作日内"
+  ],
+  "deposit": {
+    "required": true,
+    "amount": "双方协商"
+  }
+}
+</pre>
+                    </div>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-container">
+                        <img src="assets/mcp_steps/step_3.png" alt="Step 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card">
+            <div class="step-header">
+                <div class="step-number">4</div>
+                <h2 class="step-title">专属杭州拍照地图</h2>
+            </div>
+            <div class="step-content">
+                <div class="step-text">
+                    <p class="step-description">
+                        不知道去哪里拍？打开<strong>杭州专项打卡地图</strong>，快速浏览太子湾、西湖、满觉陇等30+热门约拍点。
+                        <br><br>
+                        查看地点周边的最新约拍动态，寻找同在此地的摄影搭子！
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-container">
+                        <img src="assets/mcp_steps/step_4.png" alt="Step 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card">
+            <div class="step-header">
+                <div class="step-number">5</div>
+                <h2 class="step-title">双向互评与信任榜单</h2>
+            </div>
+            <div class="step-content">
+                <div class="step-text">
+                    <p class="step-description">
+                        每一次成功的陪伴都值得被看见。约拍完成后进行<strong>双向评价</strong>，累积您的良好声誉。
+                        <br><br>
+                        登上杭州互勉信用榜单的优质用户，还能获得平台推出的季节限定线下打卡活动的优先邀请名额！
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-container">
+                        <img src="assets/mcp_steps/step_5.png" alt="Step 5">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Section -->
+        <div class="glass-card"
+            style="background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(240,249,255,0.8) 100%);">
+            <div class="step-header">
+                <div class="step-number" style="background: #333;">🚀</div>
+                <h2 class="step-title">线上到线下的信任交付</h2>
+            </div>
+            <div class="step-content">
+                <div class="step-text" style="width: 100%;">
+                    <p class="step-description" style="text-align: center; margin-bottom: 20px;">
+                        认证完成后，您可以轻松开启信任约拍：<br>
+                        <em>“在杭州约拍，不怕被鸽，不怕被骗——上‘墟里’找靠谱搭子”</em>
+                    </p>
+                    <div class="step-image-container" style="box-shadow: none; border-radius: 0;">
+                        <video autoplay loop muted playsinline
+                            style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                            <source src="{{ '/assets/videos/chat_with_agent_demo.mov' | relative_url }}"
+                                type="video/mp4">
+                            <source src="{{ '/assets/videos/chat_with_agent_demo.mov' | relative_url }}"
+                                type="video/quicktime">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
